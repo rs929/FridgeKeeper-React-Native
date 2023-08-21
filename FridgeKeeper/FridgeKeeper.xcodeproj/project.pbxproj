@@ -9,12 +9,24 @@
 /* Begin PBXBuildFile section */
 		2C1A4CEA2A7F53A900C27B0F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C1A4CE92A7F53A900C27B0F /* AppDelegate.swift */; };
 		2C1A4CEC2A7F53A900C27B0F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C1A4CEB2A7F53A900C27B0F /* SceneDelegate.swift */; };
-		2C1A4CEE2A7F53A900C27B0F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C1A4CED2A7F53A900C27B0F /* ViewController.swift */; };
+		2C1A4CEE2A7F53A900C27B0F /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C1A4CED2A7F53A900C27B0F /* LoginViewController.swift */; };
 		2C1A4CF32A7F53AB00C27B0F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2C1A4CF22A7F53AB00C27B0F /* Assets.xcassets */; };
 		2C1A4CF62A7F53AB00C27B0F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2C1A4CF42A7F53AB00C27B0F /* LaunchScreen.storyboard */; };
 		2C1A4D012A7F53AB00C27B0F /* FridgeKeeperTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C1A4D002A7F53AB00C27B0F /* FridgeKeeperTests.swift */; };
 		2C1A4D0B2A7F53AB00C27B0F /* FridgeKeeperUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C1A4D0A2A7F53AB00C27B0F /* FridgeKeeperUITests.swift */; };
 		2C1A4D0D2A7F53AB00C27B0F /* FridgeKeeperUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C1A4D0C2A7F53AB00C27B0F /* FridgeKeeperUITestsLaunchTests.swift */; };
+		2CCB02F92A93AD4D002773E2 /* HomeTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CCB02F82A93AD4D002773E2 /* HomeTabBarViewController.swift */; };
+		2CCB02FB2A93B104002773E2 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CCB02FA2A93B104002773E2 /* HomeViewController.swift */; };
+		2CCB02FD2A93B116002773E2 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CCB02FC2A93B116002773E2 /* BaseViewController.swift */; };
+		2CCB03062A93BA78002773E2 /* Lora-Italic-VariableFont_wght.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2CCB03042A93BA78002773E2 /* Lora-Italic-VariableFont_wght.ttf */; };
+		2CCB03072A93BA78002773E2 /* Lora-VariableFont_wght.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2CCB03052A93BA78002773E2 /* Lora-VariableFont_wght.ttf */; };
+		2CCB030C2A93BB01002773E2 /* FontUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CCB030B2A93BB01002773E2 /* FontUtils.swift */; };
+		2CCB03152A93BB75002773E2 /* Lora-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2CCB030D2A93BB75002773E2 /* Lora-Medium.ttf */; };
+		2CCB03162A93BB75002773E2 /* Lora-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2CCB030E2A93BB75002773E2 /* Lora-Bold.ttf */; };
+		2CCB03172A93BB75002773E2 /* Lora-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2CCB030F2A93BB75002773E2 /* Lora-Italic.ttf */; };
+		2CCB03182A93BB75002773E2 /* Lora-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2CCB03102A93BB75002773E2 /* Lora-Regular.ttf */; };
+		2CCB031A2A93BB75002773E2 /* Lora-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2CCB03122A93BB75002773E2 /* Lora-SemiBold.ttf */; };
+		2CCB031E2A93C0AE002773E2 /* ViewUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CCB031D2A93C0AE002773E2 /* ViewUtils.swift */; };
 		D92B6E0FB076C51552E963E5 /* Pods_FridgeKeeper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 65120E4D8A5CC90107BDBB6E /* Pods_FridgeKeeper.framework */; };
 /* End PBXBuildFile section */
 
@@ -40,7 +52,7 @@
 		2C1A4CE62A7F53A900C27B0F /* FridgeKeeper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FridgeKeeper.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2C1A4CE92A7F53A900C27B0F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2C1A4CEB2A7F53A900C27B0F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		2C1A4CED2A7F53A900C27B0F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		2C1A4CED2A7F53A900C27B0F /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		2C1A4CF22A7F53AB00C27B0F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2C1A4CF52A7F53AB00C27B0F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2C1A4CF72A7F53AB00C27B0F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -49,6 +61,18 @@
 		2C1A4D062A7F53AB00C27B0F /* FridgeKeeperUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FridgeKeeperUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2C1A4D0A2A7F53AB00C27B0F /* FridgeKeeperUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FridgeKeeperUITests.swift; sourceTree = "<group>"; };
 		2C1A4D0C2A7F53AB00C27B0F /* FridgeKeeperUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FridgeKeeperUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		2CCB02F82A93AD4D002773E2 /* HomeTabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTabBarViewController.swift; sourceTree = "<group>"; };
+		2CCB02FA2A93B104002773E2 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		2CCB02FC2A93B116002773E2 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		2CCB03042A93BA78002773E2 /* Lora-Italic-VariableFont_wght.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lora-Italic-VariableFont_wght.ttf"; sourceTree = "<group>"; };
+		2CCB03052A93BA78002773E2 /* Lora-VariableFont_wght.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lora-VariableFont_wght.ttf"; sourceTree = "<group>"; };
+		2CCB030B2A93BB01002773E2 /* FontUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontUtils.swift; sourceTree = "<group>"; };
+		2CCB030D2A93BB75002773E2 /* Lora-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lora-Medium.ttf"; sourceTree = "<group>"; };
+		2CCB030E2A93BB75002773E2 /* Lora-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lora-Bold.ttf"; sourceTree = "<group>"; };
+		2CCB030F2A93BB75002773E2 /* Lora-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lora-Italic.ttf"; sourceTree = "<group>"; };
+		2CCB03102A93BB75002773E2 /* Lora-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lora-Regular.ttf"; sourceTree = "<group>"; };
+		2CCB03122A93BB75002773E2 /* Lora-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lora-SemiBold.ttf"; sourceTree = "<group>"; };
+		2CCB031D2A93C0AE002773E2 /* ViewUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewUtils.swift; sourceTree = "<group>"; };
 		65120E4D8A5CC90107BDBB6E /* Pods_FridgeKeeper.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FridgeKeeper.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C2C5903F5E27C1CAA8FD53C0 /* Pods-FridgeKeeper.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FridgeKeeper.release.xcconfig"; path = "Target Support Files/Pods-FridgeKeeper/Pods-FridgeKeeper.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -106,9 +130,12 @@
 			children = (
 				2C1A4CE92A7F53A900C27B0F /* AppDelegate.swift */,
 				2C1A4CEB2A7F53A900C27B0F /* SceneDelegate.swift */,
-				2C1A4CED2A7F53A900C27B0F /* ViewController.swift */,
+				2CCB03002A93B131002773E2 /* View Controllers */,
+				2CCB030A2A93BAF1002773E2 /* Utilities */,
+				2CCB03032A93B176002773E2 /* Custom Views */,
 				2C1A4CF22A7F53AB00C27B0F /* Assets.xcassets */,
 				2C1A4CF42A7F53AB00C27B0F /* LaunchScreen.storyboard */,
+				2CCB03092A93BA8F002773E2 /* Fonts */,
 				2C1A4CF72A7F53AB00C27B0F /* Info.plist */,
 			);
 			path = FridgeKeeper;
@@ -131,6 +158,55 @@
 			path = FridgeKeeperUITests;
 			sourceTree = "<group>";
 		};
+		2CCB03002A93B131002773E2 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				2CCB02F82A93AD4D002773E2 /* HomeTabBarViewController.swift */,
+				2C1A4CED2A7F53A900C27B0F /* LoginViewController.swift */,
+				2CCB02FA2A93B104002773E2 /* HomeViewController.swift */,
+			);
+			path = "View Controllers";
+			sourceTree = "<group>";
+		};
+		2CCB03032A93B176002773E2 /* Custom Views */ = {
+			isa = PBXGroup;
+			children = (
+				2CCB02FC2A93B116002773E2 /* BaseViewController.swift */,
+			);
+			path = "Custom Views";
+			sourceTree = "<group>";
+		};
+		2CCB03082A93BA85002773E2 /* Lora */ = {
+			isa = PBXGroup;
+			children = (
+				2CCB030E2A93BB75002773E2 /* Lora-Bold.ttf */,
+				2CCB030F2A93BB75002773E2 /* Lora-Italic.ttf */,
+				2CCB030D2A93BB75002773E2 /* Lora-Medium.ttf */,
+				2CCB03102A93BB75002773E2 /* Lora-Regular.ttf */,
+				2CCB03122A93BB75002773E2 /* Lora-SemiBold.ttf */,
+				2CCB03042A93BA78002773E2 /* Lora-Italic-VariableFont_wght.ttf */,
+				2CCB03052A93BA78002773E2 /* Lora-VariableFont_wght.ttf */,
+			);
+			path = Lora;
+			sourceTree = "<group>";
+		};
+		2CCB03092A93BA8F002773E2 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				2CCB03082A93BA85002773E2 /* Lora */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		2CCB030A2A93BAF1002773E2 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				2CCB030B2A93BB01002773E2 /* FontUtils.swift */,
+				2CCB031D2A93C0AE002773E2 /* ViewUtils.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
 		4E901247B91358BC75D1D7A0 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -145,7 +221,6 @@
 				1BEE21ABB2CCD7614376D181 /* Pods-FridgeKeeper.debug.xcconfig */,
 				C2C5903F5E27C1CAA8FD53C0 /* Pods-FridgeKeeper.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -255,8 +330,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2CCB03152A93BB75002773E2 /* Lora-Medium.ttf in Resources */,
+				2CCB031A2A93BB75002773E2 /* Lora-SemiBold.ttf in Resources */,
+				2CCB03182A93BB75002773E2 /* Lora-Regular.ttf in Resources */,
+				2CCB03172A93BB75002773E2 /* Lora-Italic.ttf in Resources */,
 				2C1A4CF62A7F53AB00C27B0F /* LaunchScreen.storyboard in Resources */,
+				2CCB03062A93BA78002773E2 /* Lora-Italic-VariableFont_wght.ttf in Resources */,
+				2CCB03162A93BB75002773E2 /* Lora-Bold.ttf in Resources */,
 				2C1A4CF32A7F53AB00C27B0F /* Assets.xcassets in Resources */,
+				2CCB03072A93BA78002773E2 /* Lora-VariableFont_wght.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -323,9 +405,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2C1A4CEE2A7F53A900C27B0F /* ViewController.swift in Sources */,
+				2CCB02FB2A93B104002773E2 /* HomeViewController.swift in Sources */,
+				2C1A4CEE2A7F53A900C27B0F /* LoginViewController.swift in Sources */,
+				2CCB030C2A93BB01002773E2 /* FontUtils.swift in Sources */,
+				2CCB02F92A93AD4D002773E2 /* HomeTabBarViewController.swift in Sources */,
 				2C1A4CEA2A7F53A900C27B0F /* AppDelegate.swift in Sources */,
 				2C1A4CEC2A7F53A900C27B0F /* SceneDelegate.swift in Sources */,
+				2CCB031E2A93C0AE002773E2 /* ViewUtils.swift in Sources */,
+				2CCB02FD2A93B116002773E2 /* BaseViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
