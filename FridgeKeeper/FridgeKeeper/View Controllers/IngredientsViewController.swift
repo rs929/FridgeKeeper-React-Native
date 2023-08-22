@@ -1,5 +1,5 @@
 //
-//  HomeViewController.swift
+//  IngredientsViewController.swift
 //  FridgeKeeper
 //
 //  Created by Richie Sun on 8/21/23.
@@ -7,18 +7,17 @@
 
 import UIKit
 
-class HomeViewController: BaseViewController {
+class IngredientsViewController: BaseViewController {
     
     // MARK: - Views
-    private let fridgeLabel = UILabel()
-    private let fridgeCollectionView = UICollectionView()
     
     // MARK: - Lifecycle Functions
     
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .white
-        title = "Home"
+        title = "Ingredients"
+        
     }
     
     // MARK: - Setup Views
@@ -26,3 +25,4 @@ class HomeViewController: BaseViewController {
     // MARK: - Helpers
     
 }
+

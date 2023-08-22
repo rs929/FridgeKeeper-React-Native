@@ -27,6 +27,14 @@
 		2CCB03182A93BB75002773E2 /* Lora-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2CCB03102A93BB75002773E2 /* Lora-Regular.ttf */; };
 		2CCB031A2A93BB75002773E2 /* Lora-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2CCB03122A93BB75002773E2 /* Lora-SemiBold.ttf */; };
 		2CCB031E2A93C0AE002773E2 /* ViewUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CCB031D2A93C0AE002773E2 /* ViewUtils.swift */; };
+		2CCB03202A93EB9A002773E2 /* RecipesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CCB031F2A93EB9A002773E2 /* RecipesViewController.swift */; };
+		2CCB03222A93EBA9002773E2 /* IngredientsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CCB03212A93EBA9002773E2 /* IngredientsViewController.swift */; };
+		2CCB03242A9558AE002773E2 /* ColorUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CCB03232A9558AE002773E2 /* ColorUtils.swift */; };
+		2CCB03272A955980002773E2 /* FridgeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CCB03262A955980002773E2 /* FridgeCell.swift */; };
+		2CCB03292A95598A002773E2 /* IngredientCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CCB03282A95598A002773E2 /* IngredientCell.swift */; };
+		2CCB032B2A9559C2002773E2 /* RecipeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CCB032A2A9559C2002773E2 /* RecipeCell.swift */; };
+		2CCB03302A955C08002773E2 /* Ingredient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CCB032F2A955C08002773E2 /* Ingredient.swift */; };
+		2CCB03322A955D7B002773E2 /* Recipe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CCB03312A955D7B002773E2 /* Recipe.swift */; };
 		D92B6E0FB076C51552E963E5 /* Pods_FridgeKeeper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 65120E4D8A5CC90107BDBB6E /* Pods_FridgeKeeper.framework */; };
 /* End PBXBuildFile section */
 
@@ -73,6 +81,14 @@
 		2CCB03102A93BB75002773E2 /* Lora-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lora-Regular.ttf"; sourceTree = "<group>"; };
 		2CCB03122A93BB75002773E2 /* Lora-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lora-SemiBold.ttf"; sourceTree = "<group>"; };
 		2CCB031D2A93C0AE002773E2 /* ViewUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewUtils.swift; sourceTree = "<group>"; };
+		2CCB031F2A93EB9A002773E2 /* RecipesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipesViewController.swift; sourceTree = "<group>"; };
+		2CCB03212A93EBA9002773E2 /* IngredientsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IngredientsViewController.swift; sourceTree = "<group>"; };
+		2CCB03232A9558AE002773E2 /* ColorUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorUtils.swift; sourceTree = "<group>"; };
+		2CCB03262A955980002773E2 /* FridgeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FridgeCell.swift; sourceTree = "<group>"; };
+		2CCB03282A95598A002773E2 /* IngredientCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IngredientCell.swift; sourceTree = "<group>"; };
+		2CCB032A2A9559C2002773E2 /* RecipeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeCell.swift; sourceTree = "<group>"; };
+		2CCB032F2A955C08002773E2 /* Ingredient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ingredient.swift; sourceTree = "<group>"; };
+		2CCB03312A955D7B002773E2 /* Recipe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recipe.swift; sourceTree = "<group>"; };
 		65120E4D8A5CC90107BDBB6E /* Pods_FridgeKeeper.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FridgeKeeper.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C2C5903F5E27C1CAA8FD53C0 /* Pods-FridgeKeeper.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FridgeKeeper.release.xcconfig"; path = "Target Support Files/Pods-FridgeKeeper/Pods-FridgeKeeper.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -128,6 +144,7 @@
 		2C1A4CE82A7F53A900C27B0F /* FridgeKeeper */ = {
 			isa = PBXGroup;
 			children = (
+				2CCB032E2A955BFD002773E2 /* Models */,
 				2C1A4CE92A7F53A900C27B0F /* AppDelegate.swift */,
 				2C1A4CEB2A7F53A900C27B0F /* SceneDelegate.swift */,
 				2CCB03002A93B131002773E2 /* View Controllers */,
@@ -161,9 +178,12 @@
 		2CCB03002A93B131002773E2 /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				2CCB03252A95596E002773E2 /* Cells */,
 				2CCB02F82A93AD4D002773E2 /* HomeTabBarViewController.swift */,
 				2C1A4CED2A7F53A900C27B0F /* LoginViewController.swift */,
 				2CCB02FA2A93B104002773E2 /* HomeViewController.swift */,
+				2CCB031F2A93EB9A002773E2 /* RecipesViewController.swift */,
+				2CCB03212A93EBA9002773E2 /* IngredientsViewController.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -202,9 +222,29 @@
 			isa = PBXGroup;
 			children = (
 				2CCB030B2A93BB01002773E2 /* FontUtils.swift */,
+				2CCB03232A9558AE002773E2 /* ColorUtils.swift */,
 				2CCB031D2A93C0AE002773E2 /* ViewUtils.swift */,
 			);
 			path = Utilities;
+			sourceTree = "<group>";
+		};
+		2CCB03252A95596E002773E2 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				2CCB03262A955980002773E2 /* FridgeCell.swift */,
+				2CCB03282A95598A002773E2 /* IngredientCell.swift */,
+				2CCB032A2A9559C2002773E2 /* RecipeCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		2CCB032E2A955BFD002773E2 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				2CCB032F2A955C08002773E2 /* Ingredient.swift */,
+				2CCB03312A955D7B002773E2 /* Recipe.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 		4E901247B91358BC75D1D7A0 /* Frameworks */ = {
@@ -406,13 +446,21 @@
 			buildActionMask = 2147483647;
 			files = (
 				2CCB02FB2A93B104002773E2 /* HomeViewController.swift in Sources */,
+				2CCB03202A93EB9A002773E2 /* RecipesViewController.swift in Sources */,
+				2CCB03302A955C08002773E2 /* Ingredient.swift in Sources */,
 				2C1A4CEE2A7F53A900C27B0F /* LoginViewController.swift in Sources */,
+				2CCB032B2A9559C2002773E2 /* RecipeCell.swift in Sources */,
 				2CCB030C2A93BB01002773E2 /* FontUtils.swift in Sources */,
 				2CCB02F92A93AD4D002773E2 /* HomeTabBarViewController.swift in Sources */,
+				2CCB03292A95598A002773E2 /* IngredientCell.swift in Sources */,
+				2CCB03222A93EBA9002773E2 /* IngredientsViewController.swift in Sources */,
 				2C1A4CEA2A7F53A900C27B0F /* AppDelegate.swift in Sources */,
 				2C1A4CEC2A7F53A900C27B0F /* SceneDelegate.swift in Sources */,
+				2CCB03272A955980002773E2 /* FridgeCell.swift in Sources */,
+				2CCB03242A9558AE002773E2 /* ColorUtils.swift in Sources */,
 				2CCB031E2A93C0AE002773E2 /* ViewUtils.swift in Sources */,
 				2CCB02FD2A93B116002773E2 /* BaseViewController.swift in Sources */,
+				2CCB03322A955D7B002773E2 /* Recipe.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

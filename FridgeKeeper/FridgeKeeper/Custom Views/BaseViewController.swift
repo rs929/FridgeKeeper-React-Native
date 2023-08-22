@@ -22,7 +22,7 @@ class BaseViewController: UIViewController {
     // MARK: - Setup Views
     private func setupHeader() {
         navigationController?.navigationBar.prefersLargeTitles = false
-        navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.font: UIFont(name: "", size: 18)!]
+        navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.font: UIFont.customFont(of: 24, weight: .semibold)]
     }
     
     // MARK: - Helpers

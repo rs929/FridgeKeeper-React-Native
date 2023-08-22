@@ -12,6 +12,10 @@ class HomeTabBarViewController: UITabBarController {
     // MARK: - Tab View Controllers
     private let homeVC = HomeViewController()
     lazy var homeNavCtrl = UINavigationController(rootViewController: homeVC)
+    private let ingredientsVC = IngredientsViewController()
+    lazy var ingredientsNavCtrl = UINavigationController(rootViewController: ingredientsVC)
+    private let recipesVC = RecipesViewController()
+    lazy var recipesNavCtrl = UINavigationController(rootViewController: recipesVC)
     
     // MARK: - Views
     
@@ -19,15 +23,17 @@ class HomeTabBarViewController: UITabBarController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .red
         
+        setupTabBar()
     }
     
     // MARK: - Setup Views
     
     private func setupTabBar() {
-        homeNavCtrl.tabBarItem = UITabBarItem(title: <#T##String?#>, image: <#T##UIImage?#>, selectedImage: <#T##UIImage?#>)
-        setViewControllers([homeNavCtrl], animated: false)
+        homeNavCtrl.tabBarItem = UITabBarItem(title: "Home", image: UIImage(systemName: "house.circle"), selectedImage: UIImage(systemName: "house.circle.fill"))
+        ingredientsNavCtrl.tabBarItem = UITabBarItem(title: "Ingredients", image: UIImage(systemName: "fork.knife.circle"), selectedImage: UIImage(systemName: "fork.knife.circle.fill"))
+        recipesNavCtrl.tabBarItem = UITabBarItem(title: "Recipes", image: UIImage(systemName: "book.circle"), selectedImage: UIImage(systemName: "book.circle.fill"))
+        setViewControllers([homeNavCtrl, ingredientsNavCtrl, recipesNavCtrl], animated: false)
     }
     
     // MARK: - Helpers
