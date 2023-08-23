@@ -43,5 +43,32 @@ class NetworkManager {
         }
     }
     
+    func readData(completion: @escaping (Result<GTLRSheets_ValueRange, Error>) -> Void) {
+        let signInConfig = GIDConfiguration.init(clientID: Keys.clientID)
+        GIDSignIn.sharedInstance.configuration = signInConfig
+        
+        sheetsService.apiKey = Keys.GOOGLE_API_KEY
+        sheetsService.authorizer = GIDSignIn.sharedInstance.currentUser?.fetcherAuthorizer
+        
+        let spreadsheetId = Keys.INGREDIENTS_ID
+        
+        let range = "A1:Q"
+        let query = GTLRSheetsQuery_SpreadsheetsValuesGet
+            .query(withSpreadsheetId: spreadsheetId, range:range)
+        
+        sheetsService.executeQuery(query) { (ticket, result, error) in
+            if let error = error {
+                completion(.failure(error))
+                return
+            }
+            
+            guard let result = result as? GTLRSheets_ValueRange else {
+                return
+            }
+            
+            completion(.success(result))
+        }
+    }
+    
 }
 
