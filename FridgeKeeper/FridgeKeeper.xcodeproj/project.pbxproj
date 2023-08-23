@@ -162,7 +162,6 @@
 				2C1A4CF42A7F53AB00C27B0F /* LaunchScreen.storyboard */,
 				2C269B772A9582F0000A3BD5 /* Supporting */,
 				2C1A4CF72A7F53AB00C27B0F /* Info.plist */,
-				2C269B7E2A958D37000A3BD5 /* GoogleService-Info.plist */,
 				2C269B7C2A95846E000A3BD5 /* NetworkManager.swift */,
 			);
 			path = FridgeKeeper;
@@ -191,6 +190,7 @@
 				2CCB03092A93BA8F002773E2 /* Fonts */,
 				2C269B782A958301000A3BD5 /* Keys.swift */,
 				2C269B7A2A95839D000A3BD5 /* Keys.plist */,
+				2C269B7E2A958D37000A3BD5 /* GoogleService-Info.plist */,
 			);
 			path = Supporting;
 			sourceTree = "<group>";
