@@ -17,6 +17,9 @@ class NetworkManager {
     let sheetsService = GTLRSheetsService()
     
     func getAllIngredients(completion: @escaping (Result<GTLRSheets_Spreadsheet?, Error>) -> Void) {
+        let signInConfig = GIDConfiguration.init(clientID: Keys.clientID)
+        GIDSignIn.sharedInstance.configuration = signInConfig
+        
         sheetsService.apiKey = Keys.GOOGLE_API_KEY
         sheetsService.authorizer = GIDSignIn.sharedInstance.currentUser?.fetcherAuthorizer
         

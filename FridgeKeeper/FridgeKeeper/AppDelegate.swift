@@ -5,6 +5,8 @@
 //  Created by Richie Sun on 8/6/23.
 //
 
+import GoogleSignIn
+import GoogleAPIClientForREST
 import UIKit
 
 @main
@@ -13,7 +15,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        
+        let signInConfig = GIDConfiguration.init(clientID: Keys.clientID)
+        GIDSignIn.sharedInstance.configuration = signInConfig
+        
         return true
     }
 

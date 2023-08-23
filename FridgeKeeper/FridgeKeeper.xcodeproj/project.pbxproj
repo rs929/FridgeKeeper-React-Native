@@ -152,9 +152,9 @@
 		2C1A4CE82A7F53A900C27B0F /* FridgeKeeper */ = {
 			isa = PBXGroup;
 			children = (
-				2CCB032E2A955BFD002773E2 /* Models */,
 				2C1A4CE92A7F53A900C27B0F /* AppDelegate.swift */,
 				2C1A4CEB2A7F53A900C27B0F /* SceneDelegate.swift */,
+				2CCB032E2A955BFD002773E2 /* Models */,
 				2CCB03002A93B131002773E2 /* View Controllers */,
 				2CCB030A2A93BAF1002773E2 /* Utilities */,
 				2CCB03032A93B176002773E2 /* Custom Views */,
