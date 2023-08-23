@@ -18,7 +18,6 @@
 		2C269B792A958301000A3BD5 /* Keys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C269B782A958301000A3BD5 /* Keys.swift */; };
 		2C269B7B2A95839D000A3BD5 /* Keys.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2C269B7A2A95839D000A3BD5 /* Keys.plist */; };
 		2C269B7D2A95846E000A3BD5 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C269B7C2A95846E000A3BD5 /* NetworkManager.swift */; };
-		2C269B812A958E87000A3BD5 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2C269B802A958E87000A3BD5 /* GoogleService-Info.plist */; };
 		2CCB02F92A93AD4D002773E2 /* HomeTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CCB02F82A93AD4D002773E2 /* HomeTabBarViewController.swift */; };
 		2CCB02FB2A93B104002773E2 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CCB02FA2A93B104002773E2 /* HomeViewController.swift */; };
 		2CCB02FD2A93B116002773E2 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CCB02FC2A93B116002773E2 /* BaseViewController.swift */; };
@@ -76,7 +75,6 @@
 		2C269B782A958301000A3BD5 /* Keys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Keys.swift; sourceTree = "<group>"; };
 		2C269B7A2A95839D000A3BD5 /* Keys.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Keys.plist; sourceTree = "<group>"; };
 		2C269B7C2A95846E000A3BD5 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
-		2C269B802A958E87000A3BD5 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		2CCB02F82A93AD4D002773E2 /* HomeTabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTabBarViewController.swift; sourceTree = "<group>"; };
 		2CCB02FA2A93B104002773E2 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		2CCB02FC2A93B116002773E2 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
@@ -189,7 +187,6 @@
 			children = (
 				2CCB03092A93BA8F002773E2 /* Fonts */,
 				2C269B782A958301000A3BD5 /* Keys.swift */,
-				2C269B802A958E87000A3BD5 /* GoogleService-Info.plist */,
 				2C269B7A2A95839D000A3BD5 /* Keys.plist */,
 			);
 			path = Supporting;
@@ -395,7 +392,6 @@
 				2CCB03182A93BB75002773E2 /* Lora-Regular.ttf in Resources */,
 				2CCB03172A93BB75002773E2 /* Lora-Italic.ttf in Resources */,
 				2C269B7B2A95839D000A3BD5 /* Keys.plist in Resources */,
-				2C269B812A958E87000A3BD5 /* GoogleService-Info.plist in Resources */,
 				2C1A4CF62A7F53AB00C27B0F /* LaunchScreen.storyboard in Resources */,
 				2CCB03062A93BA78002773E2 /* Lora-Italic-VariableFont_wght.ttf in Resources */,
 				2CCB03162A93BB75002773E2 /* Lora-Bold.ttf in Resources */,

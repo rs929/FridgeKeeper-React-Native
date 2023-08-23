@@ -1,6 +1,0 @@
-framework module Pods_FridgeKeeper {
-  umbrella header "Pods-FridgeKeeper-umbrella.h"
-
-  export *
-  module * { export * }
-}
