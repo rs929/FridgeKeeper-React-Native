@@ -11,7 +11,7 @@ class HomeViewController: BaseViewController {
     
     // MARK: - Views
     private let fridgeLabel = UILabel()
-    private let fridgeCollectionView = UICollectionView()
+//    private let fridgeCollectionView = UICollectionView()
     
     // MARK: - Lifecycle Functions
     

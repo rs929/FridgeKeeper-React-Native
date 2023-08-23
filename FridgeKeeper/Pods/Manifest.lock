@@ -19,6 +19,11 @@ PODS:
     - GoogleUtilities/Logger (~> 7.8)
   - FirebaseCoreInternal (10.11.0):
     - "GoogleUtilities/NSData+zlib (~> 7.8)"
+  - GoogleAPIClientForREST/Core (3.1.0):
+    - GTMSessionFetcher/Full (< 4.0, >= 1.6.1)
+  - GoogleAPIClientForREST/Sheets (3.1.0):
+    - GoogleAPIClientForREST/Core
+    - GTMSessionFetcher/Full (< 4.0, >= 1.6.1)
   - GoogleSignIn (7.0.0):
     - AppAuth (~> 1.5)
     - GTMAppAuth (< 3.0, >= 1.3)
@@ -42,6 +47,8 @@ PODS:
     - AppAuth/Core (~> 1.6)
     - GTMSessionFetcher/Core (< 4.0, >= 1.5)
   - GTMSessionFetcher/Core (3.1.1)
+  - GTMSessionFetcher/Full (3.1.1):
+    - GTMSessionFetcher/Core
   - PromisesObjC (2.2.0)
   - SDWebImage (5.16.0):
     - SDWebImage/Core (= 5.16.0)
@@ -51,6 +58,7 @@ PODS:
 DEPENDENCIES:
   - Alamofire
   - FirebaseAuth
+  - GoogleAPIClientForREST/Sheets
   - GoogleSignIn
   - SDWebImage
   - SnapKit
@@ -63,6 +71,7 @@ SPEC REPOS:
     - FirebaseAuth
     - FirebaseCore
     - FirebaseCoreInternal
+    - GoogleAPIClientForREST
     - GoogleSignIn
     - GoogleUtilities
     - GTMAppAuth
@@ -78,6 +87,7 @@ SPEC CHECKSUMS:
   FirebaseAuth: 7aabcb00fbf330db49c207c0d645b8b1b62df0e9
   FirebaseCore: 62fd4d549f5e3f3bd52b7998721c5fa0557fb355
   FirebaseCoreInternal: 9e46c82a14a3b3a25be4e1e151ce6d21536b89c0
+  GoogleAPIClientForREST: b606c614570575ffccbde27a3ee5e761b169fca4
   GoogleSignIn: b232380cf495a429b8095d3178a8d5855b42e842
   GoogleUtilities: 9aa0ad5a7bc171f8bae016300bfcfa3fb8425749
   GTMAppAuth: 99fb010047ba3973b7026e45393f51f27ab965ae
@@ -86,6 +96,6 @@ SPEC CHECKSUMS:
   SDWebImage: 2aea163b50bfcb569a2726b6a754c54a4506fcf6
   SnapKit: e01d52ebb8ddbc333eefe2132acf85c8227d9c25
 
-PODFILE CHECKSUM: 59f8015274b9561843dcdc862de521bacc861d1e
+PODFILE CHECKSUM: d784565436f84d27e58c08e1589b63ea33fc47ce
 
 COCOAPODS: 1.12.1

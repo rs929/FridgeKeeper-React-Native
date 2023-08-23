@@ -3,7 +3,9 @@
 # gitignore contributors: remember to update Global/Xcode.gitignore, Objective-C.gitignore & Swift.gitignore
 
 **/GoogleService-Info.plist
-Scoop/Supporting/Keys.plist
+FridgeKeeper/GoogleService-Info.plist
+FridgeKeeper/Supporting/Keys.plist
+FridgeKeeper/Pods
 
 *.DS_Store
 

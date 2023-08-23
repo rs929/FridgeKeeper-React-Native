@@ -12,4 +12,5 @@ target 'FridgeKeeper' do
   pod 'SnapKit'
   pod 'SDWebImage'
   pod 'Alamofire'
+  pod 'GoogleAPIClientForREST/Sheets'
 end

@@ -18,6 +18,15 @@ class IngredientsViewController: BaseViewController {
         view.backgroundColor = .white
         title = "Ingredients"
         
+        NetworkManager.shared.getAllIngredients { result in
+            switch result {
+            case .success(let spreadsheet):
+                print(spreadsheet?.sheets?.count)
+            case .failure(let error):
+                print("Error in IngredientsViewController: \(error)")
+            }
+        }
+        
     }
     
     // MARK: - Setup Views
