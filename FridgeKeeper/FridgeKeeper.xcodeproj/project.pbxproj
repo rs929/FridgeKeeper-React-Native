@@ -15,6 +15,8 @@
 		2C1A4D012A7F53AB00C27B0F /* FridgeKeeperTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C1A4D002A7F53AB00C27B0F /* FridgeKeeperTests.swift */; };
 		2C1A4D0B2A7F53AB00C27B0F /* FridgeKeeperUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C1A4D0A2A7F53AB00C27B0F /* FridgeKeeperUITests.swift */; };
 		2C1A4D0D2A7F53AB00C27B0F /* FridgeKeeperUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C1A4D0C2A7F53AB00C27B0F /* FridgeKeeperUITestsLaunchTests.swift */; };
+		2C269B792A958301000A3BD5 /* Keys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C269B782A958301000A3BD5 /* Keys.swift */; };
+		2C269B7B2A95839D000A3BD5 /* Keys.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2C269B7A2A95839D000A3BD5 /* Keys.plist */; };
 		2CCB02F92A93AD4D002773E2 /* HomeTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CCB02F82A93AD4D002773E2 /* HomeTabBarViewController.swift */; };
 		2CCB02FB2A93B104002773E2 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CCB02FA2A93B104002773E2 /* HomeViewController.swift */; };
 		2CCB02FD2A93B116002773E2 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CCB02FC2A93B116002773E2 /* BaseViewController.swift */; };
@@ -69,6 +71,8 @@
 		2C1A4D062A7F53AB00C27B0F /* FridgeKeeperUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FridgeKeeperUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2C1A4D0A2A7F53AB00C27B0F /* FridgeKeeperUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FridgeKeeperUITests.swift; sourceTree = "<group>"; };
 		2C1A4D0C2A7F53AB00C27B0F /* FridgeKeeperUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FridgeKeeperUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		2C269B782A958301000A3BD5 /* Keys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Keys.swift; sourceTree = "<group>"; };
+		2C269B7A2A95839D000A3BD5 /* Keys.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Keys.plist; sourceTree = "<group>"; };
 		2CCB02F82A93AD4D002773E2 /* HomeTabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTabBarViewController.swift; sourceTree = "<group>"; };
 		2CCB02FA2A93B104002773E2 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		2CCB02FC2A93B116002773E2 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
@@ -152,7 +156,7 @@
 				2CCB03032A93B176002773E2 /* Custom Views */,
 				2C1A4CF22A7F53AB00C27B0F /* Assets.xcassets */,
 				2C1A4CF42A7F53AB00C27B0F /* LaunchScreen.storyboard */,
-				2CCB03092A93BA8F002773E2 /* Fonts */,
+				2C269B772A9582F0000A3BD5 /* Supporting */,
 				2C1A4CF72A7F53AB00C27B0F /* Info.plist */,
 			);
 			path = FridgeKeeper;
@@ -173,6 +177,16 @@
 				2C1A4D0C2A7F53AB00C27B0F /* FridgeKeeperUITestsLaunchTests.swift */,
 			);
 			path = FridgeKeeperUITests;
+			sourceTree = "<group>";
+		};
+		2C269B772A9582F0000A3BD5 /* Supporting */ = {
+			isa = PBXGroup;
+			children = (
+				2CCB03092A93BA8F002773E2 /* Fonts */,
+				2C269B782A958301000A3BD5 /* Keys.swift */,
+				2C269B7A2A95839D000A3BD5 /* Keys.plist */,
+			);
+			path = Supporting;
 			sourceTree = "<group>";
 		};
 		2CCB03002A93B131002773E2 /* View Controllers */ = {
@@ -374,6 +388,7 @@
 				2CCB031A2A93BB75002773E2 /* Lora-SemiBold.ttf in Resources */,
 				2CCB03182A93BB75002773E2 /* Lora-Regular.ttf in Resources */,
 				2CCB03172A93BB75002773E2 /* Lora-Italic.ttf in Resources */,
+				2C269B7B2A95839D000A3BD5 /* Keys.plist in Resources */,
 				2C1A4CF62A7F53AB00C27B0F /* LaunchScreen.storyboard in Resources */,
 				2CCB03062A93BA78002773E2 /* Lora-Italic-VariableFont_wght.ttf in Resources */,
 				2CCB03162A93BB75002773E2 /* Lora-Bold.ttf in Resources */,
@@ -446,6 +461,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2CCB02FB2A93B104002773E2 /* HomeViewController.swift in Sources */,
+				2C269B792A958301000A3BD5 /* Keys.swift in Sources */,
 				2CCB03202A93EB9A002773E2 /* RecipesViewController.swift in Sources */,
 				2CCB03302A955C08002773E2 /* Ingredient.swift in Sources */,
 				2C1A4CEE2A7F53A900C27B0F /* LoginViewController.swift in Sources */,
@@ -628,10 +644,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = FridgeKeeper/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = FridgeKeeper;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -643,6 +662,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = NPRS.FridgeKeeper;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -655,10 +675,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = FridgeKeeper/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = FridgeKeeper;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -670,6 +693,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = NPRS.FridgeKeeper;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

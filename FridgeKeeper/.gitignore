@@ -71,6 +71,9 @@ Pods/
 
 Carthage/Build/
 
+**/GoogleService-Info.plist
+FridgeKeeper/Supporting/Keys.plist
+
 # Accio dependency management
 Dependencies/
 .accio/
