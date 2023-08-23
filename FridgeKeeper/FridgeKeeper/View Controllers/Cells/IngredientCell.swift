@@ -5,6 +5,7 @@
 //  Created by Richie Sun on 8/22/23.
 //
 
+import SDWebImage
 import UIKit
 
 class IngredientCell: UITableViewCell {
@@ -42,12 +43,20 @@ class IngredientCell: UITableViewCell {
         
         nameLabel.font = .customFont(of: 18, weight: .semibold)
         nameLabel.textColor = .black
-        
         contentView.addSubview(nameLabel)
         
         nameLabel.snp.makeConstraints { make in
             make.leading.equalTo(ingredientImageView.snp.trailing).offset(8)
             make.centerY.equalToSuperview()
+        }
+        
+        typeLabel.font = .customFont(of: 14, weight: .regular)
+        typeLabel.textColor = .systemGray
+        contentView.addSubview(typeLabel)
+        
+        typeLabel.snp.makeConstraints { make in
+            make.centerY.equalToSuperview()
+            make.trailing.equalToSuperview().inset(16)
         }
     }
     
@@ -57,10 +66,19 @@ class IngredientCell: UITableViewCell {
         switch ingredient.type {
         case .spiceOrCondiment:
             ingredientImageView.image = UIImage(named: "spicesIcon")
+        case .vegetable:
+            ingredientImageView.image = UIImage(named: "vegetableIcon")
+        case .fruit:
+            ingredientImageView.image = UIImage(named: "fruitIcon")
         default:
             ingredientImageView.image = nil
         }
         
+        if let url = ingredient.image {
+            ingredientImageView.sd_setImage(with: url)
+        }
+        
         nameLabel.text = ingredient.name
+        typeLabel.text = ingredient.type.rawValue
     }
 }
