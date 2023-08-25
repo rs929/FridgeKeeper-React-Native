@@ -9,9 +9,25 @@ import UIKit
 
 class IngredientsViewController: BaseViewController {
     
+    private let allFilters = [
+        "All",
+        "Vegetables",
+        "Fruits",
+        "Proteins",
+        "Dairy",
+        "Spices/Condiments",
+        "Other"
+    ]
+    
+    private var allIngredients = [Ingredient]()
+    private var allSearchedIngredients = [Ingredient]()
+    
     private var ingredients = [Ingredient]()
     private var searchedIngredients = [Ingredient]()
+    
     private var isSearching: Bool = false
+    
+    private var userIngredients = [Ingredient]()
     
     // MARK: - Views
     
@@ -20,9 +36,22 @@ class IngredientsViewController: BaseViewController {
     private let emptyStateMessageLabel = UILabel()
     private let emptyStateView = UIView()
     private let filterButton = UIButton()
+    
+    private let filterCollectionView: UICollectionView = {
+        let layout = UICollectionViewFlowLayout()
+        layout.scrollDirection = .horizontal
+        layout.minimumLineSpacing = 8
+        
+        let collectionView = UICollectionView(frame: CGRect(), collectionViewLayout: layout)
+        collectionView.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
+        collectionView.showsHorizontalScrollIndicator = false
+        collectionView.allowsMultipleSelection = false
+        return collectionView
+    }()
+    
     private let ingredientsTableView = UITableView()
     private let refreshControl = UIRefreshControl()
-    private let searchBar = UISearchBar()
+    private let searchBar = CustomSearchBar()
     
     // MARK: - Lifecycle Functions
     
@@ -33,6 +62,7 @@ class IngredientsViewController: BaseViewController {
         
         fetchIngredients()
         setupSearchController()
+        setupFilterCollectionView()
         setupTableView()
         setupEmptyState()
     }
@@ -46,7 +76,7 @@ class IngredientsViewController: BaseViewController {
         
         view.addSubview(ingredientsTableView)
         ingredientsTableView.snp.makeConstraints { make in
-            make.top.equalTo(searchBar.snp.bottom)
+            make.top.equalTo(filterCollectionView.snp.bottom)
             make.leading.trailing.bottom.equalToSuperview()
         }
         
@@ -55,13 +85,44 @@ class IngredientsViewController: BaseViewController {
     }
     
     private func setupSearchController() {
-        searchBar.delegate = self
-        searchBar.placeholder = "Search Ingredients"
+        searchBar.searchTextField.delegate = self
+        searchBar.setup(placeholder: "Search Ingredients")
         view.addSubview(searchBar)
         
         searchBar.snp.makeConstraints { make in
             make.top.equalTo(view.safeAreaLayoutGuide)
-            make.leading.trailing.equalToSuperview()
+            make.leading.equalToSuperview().inset(8)
+            make.trailing.equalToSuperview().inset(50)
+            make.height.equalTo(50)
+        }
+        
+        filterButton.setImage(UIImage(systemName: "line.3.horizontal.decrease.circle"), for: .normal)
+        filterButton.setImage(UIImage(systemName: "line.3.horizontal.decrease.circle.fill"), for: .selected)
+        filterButton.addTarget(self, action: #selector(showFilters), for: .touchUpInside)
+        
+        filterButton.imageView?.snp.updateConstraints { make in
+            make.size.equalTo(36)
+        }
+        
+        view.addSubview(filterButton)
+        
+        filterButton.snp.makeConstraints { make in
+            make.leading.equalTo(searchBar.snp.trailing)
+            make.centerY.equalTo(searchBar)
+            make.size.equalTo(40)
+        }
+    }
+    
+    private func setupFilterCollectionView() {
+        filterCollectionView.delegate = self
+        filterCollectionView.dataSource = self
+        filterCollectionView.register(IngredientFilterCell.self, forCellWithReuseIdentifier: IngredientFilterCell.reuseIdentifier)
+        view.addSubview(filterCollectionView)
+        
+        filterCollectionView.snp.makeConstraints { make in
+            make.top.equalTo(searchBar.snp.bottom).offset(8)
+            make.leading.trailing.equalToSuperview().inset(8)
+            make.height.equalTo(0)
         }
     }
     
@@ -141,6 +202,7 @@ class IngredientsViewController: BaseViewController {
                     ing1.name < ing2.name
                 })
                 
+                self.allIngredients = self.ingredients
                 self.emptyStateView.isHidden = true
                 self.ingredientsTableView.reloadData()
                 self.refreshControl.endRefreshing()
@@ -175,6 +237,63 @@ class IngredientsViewController: BaseViewController {
         }
         present(alertController, animated: true, completion: nil)
     }
+    
+    @objc private func showFilters() {
+        filterButton.isSelected.toggle()
+        
+        UIView.transition(with: filterCollectionView, duration: 0.5, options: .transitionCrossDissolve) {
+            if self.filterButton.isSelected {
+                self.filterCollectionView.snp.updateConstraints { make in
+                    make.height.equalTo(40)
+                }
+            } else {
+                self.filterCollectionView.snp.updateConstraints { make in
+                    make.height.equalTo(0)
+                }
+            }
+        }
+        
+    }
+    
+    private func filter(topic: String, isSearching: Bool) {
+        var ingredients = isSearching ? self.searchedIngredients : self.allIngredients
+        
+        if topic == "All" {
+            ingredients = isSearching ? searchedIngredients : allIngredients
+        } else if topic == "Spices/Condiments" {
+            ingredients = ingredients.filter({ ingredient in
+                ingredient.type == .spiceOrCondiment
+            })
+        } else if topic == "Vegetables" {
+            ingredients = ingredients.filter({ ingredient in
+                ingredient.type == .vegetable
+            })
+        } else if topic == "Fruits" {
+            ingredients = ingredients.filter({ ingredient in
+                ingredient.type == .fruit
+            })
+        } else if topic == "Protiens" {
+            ingredients = ingredients.filter({ ingredient in
+                ingredient.type == .protein
+            })
+        } else if topic == "Dairy" {
+            ingredients = ingredients.filter({ ingredient in
+                ingredient.type == .dairy
+            })
+        } else {
+            ingredients = ingredients.filter({ ingredient in
+                ingredient.type == .other
+            })
+        }
+        
+        if isSearching {
+            searchedIngredients = ingredients
+        } else {
+            self.ingredients = ingredients
+        }
+        
+        ingredientsTableView.reloadData()
+    }
 }
 
 // MARK: UITableViewDelegate
@@ -201,23 +320,80 @@ extension IngredientsViewController: UITableViewDataSource {
     
 }
 
-// MARK: - UISearchBarDelegate
-extension IngredientsViewController: UISearchBarDelegate {
+// MARK: UITextFieldDelegate
+extension IngredientsViewController: UITextFieldDelegate {
     
-    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+    func textFieldDidChangeSelection(_ textField: UITextField) {
         searchedIngredients = ingredients.filter({ ingredient in
-            ingredient.name.lowercased().contains(searchText.lowercased())
+            ingredient.name.lowercased().contains(textField.text?.lowercased() ?? "")
         })
         
         isSearching = true
-        ingredientsTableView.reloadData()
         
         emptyStateView.isHidden = !searchedIngredients.isEmpty
+        
+        if textField.text?.isEmpty ?? true {
+            isSearching = false
+            emptyStateView.isHidden = true
+        }
+        
+        ingredientsTableView.reloadData()
     }
     
-    func searchBarTextDidEndEditing(_ searchBar: UISearchBar) {
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.endEditing(true)
+        return true
+    }
+    
+    func textFieldDidEndEditing(_ textField: UITextField) {
         isSearching = false
+    }
+}
+
+// MARK: UICollectionViewDelegate
+extension IngredientsViewController: UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        if collectionView == filterCollectionView {
+            collectionView.visibleCells.forEach { cell in
+                let ingredientCell = cell as! IngredientFilterCell
+                ingredientCell.isSelected = false
+                ingredientCell.toggleBackgroundColor()
+            }
+            
+            let selectedCell = collectionView.cellForItem(at: indexPath) as! IngredientFilterCell
+            selectedCell.isSelected = true
+            selectedCell.toggleBackgroundColor()
+            
+            // TODO: FIlter Function Here
+            
+            filter(topic: allFilters[indexPath.row], isSearching: isSearching)
+        }
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        let font = UIFont.customFont(of: 14, weight: .semibold)!
+        let fontAttributes = [NSAttributedString.Key.font: font]
+        let text = allFilters[indexPath.row]
+        let size = (text as NSString).size(withAttributes: fontAttributes)
+        return CGSize(width: size.width + 24 , height: 40)
     }
     
 }
+
+// MARK: UICollectionViewDataSource
+extension IngredientsViewController: UICollectionViewDataSource {
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        allFilters.count
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: IngredientFilterCell.reuseIdentifier, for: indexPath) as! IngredientFilterCell
+        cell.configure(filter: allFilters[indexPath.row])
+        
+        return cell
+    }
+
+}
+
 
