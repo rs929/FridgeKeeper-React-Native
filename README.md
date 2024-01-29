@@ -1,4 +1,4 @@
-# FridgeKeeper-iOS
+# FridgeKeeper-React-Native
 
 ## Description
 
